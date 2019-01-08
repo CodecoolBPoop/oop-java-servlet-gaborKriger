@@ -19,7 +19,7 @@ public class ServletWithAnnotations extends HttpServlet {
 
         out.println(
                 "<html>\n" +
-                "<head><title>" + title + "</title></head>\n" +
+                "<head>" +
                 "<body>\n" +
                 "<h1 align = \"center\">" + title + "</h1>\n" +
                 "<ul>\n" +
@@ -29,5 +29,7 @@ public class ServletWithAnnotations extends HttpServlet {
                 "<div>Visit another servlet: <a href=\"/another\">Visit the other servlet</a></div>" +
                 "</body></html>"
         );
+        out.flush();
+        out.close();
     }
 }

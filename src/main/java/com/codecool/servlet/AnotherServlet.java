@@ -37,5 +37,7 @@ public class AnotherServlet extends HttpServlet {
                         "<div>" + buffer.toString() + "</div>" +
                         "</body></html>"
         );
+        out.flush();
+        out.close();
     }
 }
